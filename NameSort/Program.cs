@@ -15,14 +15,24 @@ namespace NameSort
             {
                 filePath = args[0];
             }
-            NameList.ReadTxtFileToList(filePath);
-            Console.WriteLine("Original List");
-            NameList.PrintListToConsole();
+            try
+            {
+                NameList.ReadTxtFileToList(filePath);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Invalid filepath\nPress any key to exit");
+                Console.ReadKey();
+                Environment.Exit(-1);
+            }
+            Console.WriteLine("Retrieving List from {0}", filePath );
+            //NameList.PrintListToConsole();
             Console.WriteLine("\nSorting.....\n");
             NameList.SortListAlpha();
+            Console.WriteLine("\nSorted list \n");
             NameList.PrintListToConsole();
             NameList.PrintListToTxt("./sorted-names-list.txt");
-            Console.WriteLine("Press any key to continue.");
+            Console.WriteLine("\n-Press any key to continue.");
             Console.ReadKey();
         }
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NameSort
 {
-    public class Person : IComparable<Person>
+    public class Person : IComparable<Person>, IPerson
     {
         
         private string surname;
