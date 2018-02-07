@@ -1,9 +1,9 @@
 # NameSorter
 
-The Goal: Name Sorter
-
-Build a name sorter. Given a set of names, order that set first by last name, then by any given names the person may have. A
-name must have at least 1 given name and may have up to 3 given names.
+Read list of names from txt file unsorted-names-list.txt
+Each name has a surname and up to 3 given names.
+Sorts the names alphabetically by surname then by given.
+Print sorted list to console and create a text file of sorted list to sorted-names-list.txt 
 
 Example Usage
 Given a a file called unsorted-names-list.txt containing the following list of names;
@@ -20,10 +20,10 @@ Hunter Uriah Mathew Clarke
 Mikayla Lopez
 Frankie Conner Ritter
 
-Executing the program in the following way;
+Execute by
 name-sorter ./unsorted-names-list.txt
 
-Should result the sorted names to screen;
+Sorts names into the below order, prints to console and creates sorted-names-list.txt
 
 Marin Alvarez
 Adonis Julius Archer
@@ -36,5 +36,3 @@ Mikayla Lopez
 Janet Parsons
 Frankie Conner Ritter
 Shelby Nathan Yoder
-
-and a file in the working directory called sorted-names-list.txt containing the sorted names.
