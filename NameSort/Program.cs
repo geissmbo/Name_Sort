@@ -15,7 +15,6 @@ namespace NameSort
             {
                 filePath = args[0];
             }
-            //string filePath = args[0];
             NameList.ReadTxtFileToList(filePath);
             Console.WriteLine("Original List");
             NameList.PrintListToConsole();

@@ -63,17 +63,23 @@ namespace NameSort
         /// </returns>
         public int CompareTo(Person other)
         {
-            //TODO rework to add given name ordering if surnames equal
             int result = this.surname.CompareTo(other.surname);
-
+            
             if (result == 0)
             {
-                for (int i = 0; i < this.given.Count; i++)
+                int highestIndexComparable = Math.Min(this.given.Count, other.given.Count);
+
+                for (int i = 0; i < highestIndexComparable; i++)
                 {
                     result = this.given[i].CompareTo(other.given[i]);
                     if (result != 0)
                     {
                         return result;
+                    }
+                    //Last given name reached for one person but still no differences - sort shorter name to lower index in list
+                    if (i == highestIndexComparable - 1) 
+                    {
+                        result = (this.given.Count > other.given.Count) ? 1 : -1;
                     }
                 }
             }
