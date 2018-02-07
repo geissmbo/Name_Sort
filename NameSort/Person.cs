@@ -52,6 +52,29 @@ namespace NameSort
         }//end Override ToString
 
         /// <summary>
+        /// Converts a line of txt into a Person object.
+        /// </summary>
+        /// <param name="textLine">String being converted</param>
+        /// <returns>Person obj</returns>
+        public static Person ConvertLineToPerson(string textLine)
+        {
+            string[] splitName = textLine.Split();
+
+            int surnameIndex = splitName.Length - 1;
+
+            List<string> givenNames = new List<string>();
+            string surname = splitName[surnameIndex];
+
+            for (int i = 0; i < surnameIndex; i++)
+            {
+                givenNames.Add(splitName[i]);
+            }
+
+            Person person = new Person(surname, givenNames);//change to pass
+            return person;
+        }//end ConvertLineToPerson
+
+        /// <summary>
         /// CompareTo implementation for sort.
         /// Sorts by surname first, then by given names.
         /// </summary>

@@ -36,35 +36,12 @@ namespace NameSort
 
             while ((textLine = file.ReadLine()) != null)
             {
-                Person person = ConvertLineToPerson(textLine);
+                Person person = Person.ConvertLineToPerson(textLine);
                 AddPersonToList(person);
                 //person.PrintPerson();
             }
 
         }//end ReadTxtFileToList
-
-        /// <summary>
-        /// Converts a line of txt into a Person object.
-        /// </summary>
-        /// <param name="textLine">String being converted</param>
-        /// <returns>Person obj</returns>
-        private static Person ConvertLineToPerson(string textLine)
-        {
-            string[] splitName = textLine.Split();
-
-            int surnameIndex = splitName.Length - 1;
-
-            List<string> givenNames = new List<string>();
-            string surname = splitName[surnameIndex];
-
-            for (int i = 0; i < surnameIndex; i++)
-            {
-                givenNames.Add(splitName[i]);
-            }
-
-            Person person = new Person(surname, givenNames);//change to pass
-            return person;
-        }//end ConvertLineToPerson
 
         /// <summary>
         /// Sorts list into alphabetical order by surname and then by given names.
@@ -98,6 +75,16 @@ namespace NameSort
                 person.PrintPerson();
             }
         }//end PrintListToConsole
+
+        /// <summary>
+        /// Returns Person at specified index from Persons List, currently only used in unit tests.
+        /// </summary>
+        /// <param name="index">List index to return</param>
+        /// <returns>Person at specified index</returns>
+        public static Person GetPersonFromListByIndex(int index)
+        {
+            return persons[index];
+        }
 
     }//end class NameList
 }

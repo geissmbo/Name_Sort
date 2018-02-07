@@ -40,6 +40,35 @@ namespace NameSort.Test
         }//end ToString_MatchesFullNameThreeGiven_True
 
         [TestMethod]
+        public void ConvertLineToPerson_IsSurnameCorrect_True()
+        {
+            string testString = "John Doe";
+            List<string> given = new List<string>();
+            given.Add("John");
+            Person expected = new Person("Doe", given);
+
+            Person actual = Person.ConvertLineToPerson(testString);
+
+            Assert.AreEqual(actual.Surname, expected.Surname);
+
+        }//end ConvertLineToPerson_IsSurnameCorrect_True
+
+        [TestMethod]
+        public void ConvertLineToPerson_AreGivenNamesCorrect_True()
+        {
+            string testString = "John Andrew Doe";
+            List<string> given = new List<string>();
+            given.Add("John");
+            given.Add("Andrew");
+            Person expected = new Person("Doe", given);
+
+            Person actual = Person.ConvertLineToPerson(testString);
+
+            Assert.AreEqual(expected.ToString(), actual.ToString());
+
+        }//end ConvertLineToPerson_AreGivenNamesCorrect_True
+
+        [TestMethod]
         public void CompareTo_SortBySurname_ReturnPos()
         {
             List<string> given = new List<string>();

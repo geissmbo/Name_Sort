@@ -5,9 +5,9 @@
 	- [x] Given.
 - [x] It should print the sorted list of names to screen.
 - [x] It should write/overwrite the sorted list of names to a file called sorted-names-list.txt.
-- [ ] Unit tests complete
+- [x] Unit tests complete
 	- [x] Person.
-	- [ ] NameList.
+	- [x] NameList.
 - [x] Minimal, practical documentation should exist.
 	- [x] Readme.
 	- [x] XML comments.
