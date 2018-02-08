@@ -8,32 +8,32 @@ Print sorted list to console and create a text file of sorted list to sorted-nam
 Example Usage
 Given a a file called unsorted-names-list.txt containing the following list of names;
 
-Janet Parsons
-Vaughn Lewis
-Adonis Julius Archer
-Shelby Nathan Yoder
-Marin Alvarez
-London Lindsey
-Beau Tristan Bentley
-Leo Gardner
-Hunter Uriah Mathew Clarke
-Mikayla Lopez
-Frankie Conner Ritter
+Janet Parsons  
+Vaughn Lewis  
+Adonis Julius Archer  
+Shelby Nathan Yoder  
+Marin Alvarez  
+London Lindsey  
+Beau Tristan Bentley  
+Leo Gardner  
+Hunter Uriah Mathew Clarke  
+Mikayla Lopez  
+Frankie Conner Ritter  
 
 Execute by
 name-sorter ./unsorted-names-list.txt
 
 Sorts names into the below order, prints to console and creates sorted-names-list.txt
 
-Marin Alvarez
-Adonis Julius Archer
-Beau Tristan Bentley
-Hunter Uriah Mathew Clarke
-Leo Gardner
-Vaughn Lewis
-London Lindsey
-Mikayla Lopez
-Janet Parsons
-Frankie Conner Ritter
-Shelby Nathan Yoder
+Marin Alvarez  
+Adonis Julius Archer  
+Beau Tristan Bentley  
+Hunter Uriah Mathew Clarke  
+Leo Gardner  
+Vaughn Lewis  
+London Lindsey  
+Mikayla Lopez  
+Janet Parsons  
+Frankie Conner Ritter  
+Shelby Nathan Yoder  
 
