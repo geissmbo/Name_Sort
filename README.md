@@ -20,9 +20,9 @@ Hunter Uriah Mathew Clarke
 Mikayla Lopez  
 Frankie Conner Ritter  
 
-Execute by
-name-sorter.dll [path to file] 
-if no file path specified default path **"./unsorted-names-list.txt"** will be used.
+Execute by  
+**name-sorter.dll [path to file]**  
+If no file path specified default path **"./unsorted-names-list.txt"** will be used.
 
 Sorts names into the below order, prints to console and creates sorted-names-list.txt
 
