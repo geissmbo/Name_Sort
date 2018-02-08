@@ -13,7 +13,7 @@ namespace NameSort
         public string Surname { get; set; }
 
         /// <summary>
-        /// Person object containing surname and list of given names
+        /// Constructor for Person object containing surname and list of given names
         /// </summary>
         /// <param name="lastName">surname as string</param>
         /// <param name="givenNames">given names as list of string</param>
@@ -23,9 +23,7 @@ namespace NameSort
             given = givenNames;
         }
 
-        /// <summary>
-        /// Prints full name to console
-        /// </summary>
+
         public void PrintPerson()
         {
             foreach (var name in given)
@@ -35,10 +33,7 @@ namespace NameSort
             Console.WriteLine(surname);
         }//end PrintPerson
 
-        /// <summary>
-        /// ToString override
-        /// </summary>
-        /// <returns>Full name as space seperated string</returns>
+
         public override string ToString()
         {
             string fullName = "";
@@ -74,16 +69,7 @@ namespace NameSort
             return person;
         }//end ConvertLineToPerson
 
-        /// <summary>
-        /// CompareTo implementation for sort.
-        /// Sorts by surname first, then by given names.
-        /// </summary>
-        /// <param name="other">Person being compared to</param>
-        /// <returns>int
-        /// -1 for less than other
-        /// 0 for equal to other
-        /// 1 for greater than other
-        /// </returns>
+
         public int CompareTo(Person other)
         {
             int result = this.surname.CompareTo(other.surname);

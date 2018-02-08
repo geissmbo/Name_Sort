@@ -24,10 +24,11 @@ namespace NameSort.Test
         [TestMethod]
         public void ReadTxtFileToList_TxtLineReadCorrectly_True()
         {
-            NameList.ReadTxtFileToList("./unsorted-names-list-test.txt");
+            NameList nameList = new NameList();
+            nameList.ReadTxtFileToList("./unsorted-names-list-test.txt");
             string expected = "Janet Parsons";
 
-            string actual = NameList.GetPersonFromListByIndex(0).ToString();
+            string actual = nameList.GetPersonFromListByIndex(0).ToString();
 
             Assert.AreEqual(actual, expected);
         }//end ReadTxtFileToList_TxtLineRead_True

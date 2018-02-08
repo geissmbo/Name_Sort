@@ -5,33 +5,22 @@ using System.IO;
 
 namespace NameSort
 {
-    public class NameList
+    public class NameList : INameList
     {
-        static List<Person> persons = new List<Person>();
+        List<Person> persons = new List<Person>();
 
-        /// <summary>
-        /// Adds instance of Person to persons list
-        /// </summary>
-        /// <param name="person">Person being added</param>
-        public static void AddPersonToList(Person person)
+        public void AddPersonToList(Person person)
         {
             persons.Add(person);
         }//end AddPersonToList
 
-        /// <summary>
-        /// Converts list of people from a txt file into a List of People
-        /// </summary>
-        /// <param name="filePath">Path to file being converted</param>
-        public static void ReadTxtFileToList(string filePath)
+
+        public void ReadTxtFileToList(string filePath)
         {
             const Int32 bufferSize = 1024;
             string textLine;
 
-            var fileStream = new System.IO.FileStream(filePath,
-                                                System.IO.FileMode.Open,
-                                                System.IO.FileAccess.Read,
-                                                System.IO.FileShare.ReadWrite);
-
+            var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var file = new System.IO.StreamReader(fileStream, Encoding.UTF8, true, bufferSize);
 
             while ((textLine = file.ReadLine()) != null)
@@ -43,18 +32,15 @@ namespace NameSort
 
         }//end ReadTxtFileToList
 
-        /// <summary>
-        /// Sorts list into alphabetical order by surname and then by given names.
-        /// </summary>
-        public static void SortListAlpha()
+
+        public void SortListAlpha()
         {
             persons.Sort();
         }//end SortListAlpha
 
-        public static void PrintListToTxt(string filePath)
+
+        public void PrintListToTxt(string filePath)
         {
-            //System.IO.File.WriteAllLines(@"./sorted-names-list.txt", lines);
-            //filePath = "./sorted-names-list.txt";
             using (TextWriter tw = new StreamWriter(filePath))
             {
                 foreach (var p in persons)
@@ -65,10 +51,8 @@ namespace NameSort
 
         }//end PrintListToTxt
 
-        /// <summary>
-        /// Prints persons list to console.
-        /// </summary>
-        public static void PrintListToConsole()
+
+        public void PrintListToConsole()
         {
             foreach (var person in persons)
             {
@@ -76,12 +60,8 @@ namespace NameSort
             }
         }//end PrintListToConsole
 
-        /// <summary>
-        /// Returns Person at specified index from Persons List, currently only used in unit tests.
-        /// </summary>
-        /// <param name="index">List index to return</param>
-        /// <returns>Person at specified index</returns>
-        public static Person GetPersonFromListByIndex(int index)
+
+        public Person GetPersonFromListByIndex(int index)
         {
             return persons[index];
         }
