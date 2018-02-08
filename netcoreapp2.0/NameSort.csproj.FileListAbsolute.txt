@@ -1,0 +1,12 @@
+D:\Repositories\NameSort\Name_Sort\NameSort\obj\Release\netcoreapp2.0\NameSort.csprojResolveAssemblyReference.cache
+D:\Repositories\NameSort\Name_Sort\NameSort\obj\Release\netcoreapp2.0\NameSort.csproj.CoreCompileInputs.cache
+D:\Repositories\NameSort\Name_Sort\NameSort\obj\Release\netcoreapp2.0\NameSort.AssemblyInfoInputs.cache
+D:\Repositories\NameSort\Name_Sort\NameSort\obj\Release\netcoreapp2.0\NameSort.AssemblyInfo.cs
+D:\Repositories\NameSort\Name_Sort\NameSort\bin\Release\netcoreapp2.0\name-sort.xml
+D:\Repositories\NameSort\Name_Sort\NameSort\obj\Release\netcoreapp2.0\name-sorter.dll
+D:\Repositories\NameSort\Name_Sort\NameSort\obj\Release\netcoreapp2.0\name-sorter.pdb
+D:\Repositories\NameSort\Name_Sort\NameSort\bin\Release\netcoreapp2.0\name-sorter.deps.json
+D:\Repositories\NameSort\Name_Sort\NameSort\bin\Release\netcoreapp2.0\name-sorter.runtimeconfig.json
+D:\Repositories\NameSort\Name_Sort\NameSort\bin\Release\netcoreapp2.0\name-sorter.runtimeconfig.dev.json
+D:\Repositories\NameSort\Name_Sort\NameSort\bin\Release\netcoreapp2.0\name-sorter.dll
+D:\Repositories\NameSort\Name_Sort\NameSort\bin\Release\netcoreapp2.0\name-sorter.pdb
