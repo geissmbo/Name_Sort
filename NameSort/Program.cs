@@ -8,7 +8,11 @@ namespace NameSort
         static void Main(string[] args)
         {
             string filePath;
-            NameList nameList = new NameList();
+            //NameList nameList = new NameList();
+            GetNameListFromTxtFile nameList = new GetNameListFromTxtFile();
+            OutputListToTxtFile outputList = new OutputListToTxtFile();
+            SortNameListAscending sorter = new SortNameListAscending();
+
             if (args.Length < 1)
             {
                 filePath = "./unsorted-names-list.txt";
@@ -19,7 +23,7 @@ namespace NameSort
             }
             try
             {
-                nameList.ReadTxtFileToList(filePath);
+                nameList.PopulateNameList(filePath);
             }
             catch (Exception e)
             {
@@ -28,12 +32,11 @@ namespace NameSort
                 Environment.Exit(-1);
             }
             Console.WriteLine("Retrieving List from {0}", filePath );
-            //NameList.PrintListToConsole();
-            Console.WriteLine("\nSorting.....\n");
-            nameList.SortListAlpha();
+            //Console.WriteLine("\nSorting.....\n");
             Console.WriteLine("Sorted list \n");
-            nameList.PrintListToConsole();
-            nameList.PrintListToTxt("./sorted-names-list.txt");
+            sorter.SortListAlpha(nameList.GetNameList());
+            outputList.PrintListToConsole(nameList.GetNameList());
+            outputList.PrintList("./sorted-names-list.txt", nameList.GetNameList());
             Console.WriteLine("\n-Press any key to continue.");
             Console.ReadKey();
         }
